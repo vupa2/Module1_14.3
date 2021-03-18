@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>[Thực hành] Tìm giá trị nhỏ nhất của mảng</title>
+</head>
+<body>
+  
+  <script>
+    let arr1 = [3, 5, 1, 8, -3, 7, 8], arr2 = [7, 12, 6, 9, 20, 56, 89], arr3 = [], arr4 = [0, 0, 0, 0, 0, 0];
+
+    function minArray(arr) {
+      if(arr.length === 0) {
+        return -1;
+      } else {
+        let minIndex = arr[0];
+  
+        for(let i = 1; i < arr.length; i++){
+          if(arr[i] < minIndex) minIndex = i;
+        }
+  
+        return minIndex;
+      }
+    }
+    
+    console.log(arr1[minArray(arr1)]);
+    console.log(arr2[minArray(arr2)]);
+    console.log(arr3[minArray(arr3)]);
+    console.log(arr4[minArray(arr4)]);
+  </script>
+</body>
+</html>
